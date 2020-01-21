@@ -96,9 +96,19 @@ public class Exercises {
 		if (number[i] < 0) {
 
 			return -1;
-			
+
 		}
 	}
+
+	double firstDigit = numbers[0];
+	double middleDigit = numbers[(int) Math.floor(numbers.length / 2)];
+	double lastDigit = numbers[numbers.length - 1];
+
+	double max = (firstDigit > lastDigit && firstDigit > middleDigit) ? firstDigit : lastDigit;
+
+	return max;
+
+}
 
 // Exercise 5 //
 
