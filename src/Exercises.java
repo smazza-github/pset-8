@@ -243,7 +243,7 @@ public class Exercises {
 
 					digitsInRow++;
 
-				} else {
+			 	} else {
 
 					digitsInRow = 1;
 
@@ -279,9 +279,31 @@ public class Exercises {
 // Exercise 9 //
 
 	public boolean balance(int[] numbers) {
-		// write your code here
+
+ 	int halfSum1 = 0;
+	int halfSum2 = 0;
+
+	for (int x = i; x >= 0; x--){
+
+		halfSum1 += numbers[x];
+
+	}
+
+	for (int z = i + 1; z < numbers.length; z++) {
+
+		halfSum2 += numbers[z];
+
+	}
+
+	if (halfSum1 == halfSum2) {
+
+		return true;
+
+	}
+}
 
 		return false;	// default return value to ensure compilation
+		
 	}
 
 // Exercise 10 //
