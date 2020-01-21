@@ -52,10 +52,34 @@ public class Exercises {
 // Exercise 3 //
 
 	public int difference(int[] numbers) {
-		// write your code here
+
+		if (numbers.length < 1 || numbers == null) {
 
 		return -1;		// default return value to ensure compilation
+
 	}
+
+		int smallestValue = numbers[0];
+		int largestValue = numbers[0];
+
+		for (int i = 0; i < numbers.length; i++) {
+
+			if (numbers[i] > largestValue) {
+
+				largestValue = numbers[i];
+
+			}
+
+			if (numbers[i] < smallestValue) {
+
+				smallestValue = numbers[i];
+
+			}
+		}
+
+ return largestValue - smallestValue;
+
+}
 
 // Exercise 4 //
 
