@@ -13,15 +13,10 @@ public class Exercises {
 
 		} else {
 
-			return false;
-
-		}
-  }
-
-		// write your code here
-
 		return false;	// default return value to ensure compilation
+
 	}
+}
 
 // Exercise 2 //
 
