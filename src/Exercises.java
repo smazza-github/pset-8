@@ -303,15 +303,57 @@ public class Exercises {
 }
 
 		return false;	// default return value to ensure compilation
-		
+
 	}
 
 // Exercise 10 //
 
 	public int clumps(String[] values) {
-		// write your code here
 
-		return -1;		// default return value to ensure compilation
+	if (values == null) {
+
+		return -1;
+
 	}
 
+		for (int i = 0; i < values.length; i++) {
+
+			if (values[i] == null) {
+
+				return -1;
+
+			}
+		}
+
+    boolean equal = false;
+		boolean prevEqual = false;
+
+		String before = "";
+		int clumps = 0;
+
+		for (int i = 0; i < values.length; i++) {
+
+			if (before.equals(values[i])) {
+
+				equal = true;
+
+				if (prevEqual != true) {
+
+					clumps++;
+
+				 }
+				} else {
+
+					equal = false;
+
+				}
+
+				before = values[i];
+				prevEqual = equal;
+
+			}
+
+			return clumps;
+
+		}
 }
