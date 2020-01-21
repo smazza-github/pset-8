@@ -21,7 +21,17 @@ public class Exercises {
 // Exercise 2 //
 
 	public String[] endsMeet(String[] values, int n) {
-		// write your code here
+
+		String emptyString[] = new Strin[0];
+
+		if (values.length < n || values == null || n < 0) {
+
+			return emptyString;
+
+		}
+
+		String[] combinedString = new String[n * 2];
+		int nValue = n; 
 
 		return null;	// default return value to ensure compilation
 	}
