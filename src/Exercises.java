@@ -22,7 +22,7 @@ public class Exercises {
 
 	public String[] endsMeet(String[] values, int n) {
 
-		String emptyString[] = new Strin[0];
+		String emptyString[] = new String[0];
 
 		if (values.length < n || values == null || n < 0) {
 
@@ -93,7 +93,7 @@ public class Exercises {
 
 	for (int i = 0; i < numbers.length; i++){
 
-		if (number[i] < 0) {
+		if (numbers[i] < 0) {
 
 			return -1;
 
@@ -112,7 +112,7 @@ public class Exercises {
 
 // Exercise 5 //
 
-	public String[] middle(String[] values) {
+	public String[] middle(String[] words) {
 
 	String[] empty = new String[0];
 
@@ -129,7 +129,7 @@ public class Exercises {
 	for (int i = 0; i < words.length; i++) {
 
 		boolean isNull = false;
-		isNull = (words[i] == null) ? true : false
+		isNull = (words[i] == null) ? true : false;
 
 		if (isNull) {
 			return empty;
@@ -184,7 +184,7 @@ public class Exercises {
 		}
 
     int gap = 0;
-		boolean lastPosition = false
+		boolean lastPosition = false;
 
 		for (int i = 0; i < numbers.length; i++) {
 
@@ -229,13 +229,13 @@ public class Exercises {
 
 		}
 
-  	int digitsInRow = 0
-		int remainder1 = -1
-		int remainder2 = -1
+  	int digitsInRow = 0;
+		int remainder1 = -1;
+		int remainder2 = -1;
 
 		for (int i = 0; i < numbers.length; i++) {
 
-			remainder1 = numbers[i] % 2
+			remainder1 = numbers[i] % 2;
 
 			if (remainder1 == 1) {
 
@@ -264,7 +264,7 @@ public class Exercises {
 
 			if (digitsInRow == 3) {
 
-				return = 1;
+				return true;
 
 			}
 
@@ -279,6 +279,14 @@ public class Exercises {
 // Exercise 9 //
 
 	public boolean balance(int[] numbers) {
+
+  if (numbers == null || numbers.length < 2) {
+
+		return false;
+
+	}
+
+	for (int i = 0; i < numbers.length - 1; i++) {
 
  	int halfSum1 = 0;
 	int halfSum2 = 0;
