@@ -84,9 +84,20 @@ public class Exercises {
 // Exercise 4 //
 
 	public double biggest(double[] numbers) {
-		// write your code here
+
+	if (numbers == null || numbers.length < 3 || numbers.length % 2 == 0) {
 
 		return -1;		// default return value to ensure compilation
+
+	}
+
+	for (int i = 0; i < numbers.length; i++){
+
+		if (number[i] < 0) {
+
+			return -1;
+			
+		}
 	}
 
 // Exercise 5 //
