@@ -31,9 +31,22 @@ public class Exercises {
 		}
 
 		String[] combinedString = new String[n * 2];
-		int nValue = n; 
+		int nValue = n;
 
-		return null;	// default return value to ensure compilation
+/////////////////////////////////////////////////////////
+
+		for (int i = 0; i < n; i++) {
+			combinedString[i] = values[i];
+		}
+
+		for (int i = n; i < n * 2; i++) {
+			combinedString[i] = values[values.length - nValue];
+
+			nValue--;
+		}
+
+		return combinedString;
+
 	}
 
 // Exercise 3 //
