@@ -149,9 +149,28 @@ public class Exercises {
 // Exercise 6 //
 
 	public boolean increasing(int[] numbers) {
-		// write your code here
+
+	if (numbers == null) {
+
+		return false;
+
+	} else if (numbers.length < 1) {
+
+		return false;
+
+	}
+
+	for (int i = 1; i < numbers.length - 1; i++) {
+
+		if (numbers[i] < numbers[i+1] && numbers[i-1] < numbers[i]) {
+
+			return true;
+
+		}
+	}
 
 		return false;	// default return value to ensure compilation
+		
 	}
 
 // Exercise 7 //
