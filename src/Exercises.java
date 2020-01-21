@@ -170,15 +170,53 @@ public class Exercises {
 	}
 
 		return false;	// default return value to ensure compilation
-		
+
 	}
 
 // Exercise 7 //
 
 	public boolean everywhere(int[] numbers, int x) {
-		// write your code here
 
-		return false;	// default return value to ensure compilation
+		if (numbers.length < 1 || numbers == null) {
+
+			return false;
+
+		}
+
+    int gap = 0;
+		boolean lastPosition = false
+
+		for (int i = 0; i < numbers.length; i++) {
+
+			if (numbers[i] == x) {
+
+				gap = 0;
+				lastPosition = true;
+
+			} else {
+
+				if (i == 1 && lastPosition == false) {
+
+					return false;
+
+				} else if (lastPosition == false) {
+
+					gap++;
+
+				}
+
+				lastPosition = false;
+
+			}
+
+			if (gap == 2) {
+
+				return false;
+			}
+		}
+
+		return true;
+
 	}
 
 // Exercise 8 //
