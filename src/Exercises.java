@@ -113,10 +113,38 @@ public class Exercises {
 // Exercise 5 //
 
 	public String[] middle(String[] values) {
-		// write your code here
 
-		return null;	// default return value to ensure compilation
+	String[] empty = new String[0];
+
+	if (words == null) {
+
+		return empty;
+
+	}	else if (words.length % 2 == 0 || words.length < 3) {
+
+		return empty;
+
 	}
+
+	for (int i = 0; i < words.length; i++) {
+
+		boolean isNull = false;
+		isNull = (words[i] == null) ? true : false
+
+		if (isNull) {
+			return empty;
+		}
+	}
+
+	String[] outputArray = new String[3];
+
+	outputArray[0] = words[(int) Math.floor(words.length / 2) - 1];
+	outputArray[1] = words[(int) Math.floor(words.length / 2)];
+	outputArray[2] = words[(int) Math.floor(words.length / 2) + 1];
+
+	return outputArray;
+
+}
 
 // Exercise 6 //
 
